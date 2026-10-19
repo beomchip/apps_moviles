@@ -1,41 +1,37 @@
+//uso del paquete de diseño para android
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+//funcion principal
+void main() {
+  //metodo que manda a ejecutar la pantalla inicial de la aplicación
+  runApp(MainApp());
+}
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  // This widget is the root of your application.
+//clase para la pantalla inicial (depende de StatelessWidget)
+class MainApp extends StatelessWidget {
+  MainApp({super.key}); //hereda todo el contenido de la clase padre
+
+//sobrescribir el metodo build, para construir la pantalla inicial
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // Application name
-      title: 'Flutter Hello World',
-      // Application theme data, you can set the colors for the application as
-      // you want
-      theme: ThemeData(
-        // useMaterial3: false,
-        primarySwatch: Colors.blue,
-      ),
-      // A widget which will be started on application startup
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  final String title;
-  const MyHomePage({super.key, required this.title});  
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // The title text which will be shown on the action bar
-        title: Text(title),
-      ),
-      body: Center(
-        child: Text(
-          'Hello, World!',
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: Center(child: Text("App no.1 por chafas")),
+        ),
+        body: Center(
+            child: Text(
+          'Hola mundo jejejjeje',
+          style: TextStyle(
+            fontSize: 24,
+            color: Color(0xff7269c3),
+            backgroundColor: Color(0xff88aee0),
+          ),
+        )),
+        floatingActionButton: FloatingActionButton(
+          child: Text("𖦹"),
+          onPressed: null,
         ),
       ),
     );
