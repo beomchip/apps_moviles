@@ -1,4 +1,6 @@
 //uso del paquete de diseño para android
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 //funcion principal
@@ -18,20 +20,38 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Center(child: Text("App no.1 por chafas")),
-        ),
-        body: Center(
+          backgroundColor: Color(0xff4f4668),
+          title: Center(
             child: Text(
-          'Hola mundo jejejjeje',
-          style: TextStyle(
-            fontSize: 24,
-            color: Color(0xff7269c3),
-            backgroundColor: Color(0xff88aee0),
+              "ʚ App no.1 por chafas ɞ",
+              style: TextStyle(
+                color: Colors.white,
+              ),
+            ),
           ),
-        )),
+        ),
+        body: Container(
+          color: Color(0xff8883b7),
+          child: Center(
+            child: Text(
+              'Hola mundo jejejjeje',
+              style: TextStyle(
+                fontSize: 24,
+                color: Color(0xff4f4668),
+              ),
+            ),
+          ),
+        ),
         floatingActionButton: FloatingActionButton(
-          child: Text("𖦹"),
-          onPressed: null,
+          onPressed: () {}, // <--- Cambiado de null a una función vacía
+          child: const Text(
+            "𖦹",
+            style: TextStyle(
+              fontSize: 30,
+              color: Colors.white,
+            ),
+          ),
+          backgroundColor: Color(0xff4f4668),
         ),
       ),
     );
